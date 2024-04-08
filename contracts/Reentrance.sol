@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 
@@ -31,7 +31,7 @@ contract Reentrance {
 contract Reentrance_Attacker {
     Reentrance reEntrance;
 
-    constructor(address payable _reEntranceAddress) {
+    constructor(address payable _reEntranceAddress) public {
         reEntrance = Reentrance(_reEntranceAddress);
     }
 

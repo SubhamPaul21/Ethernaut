@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
 contract Fallback {
     mapping(address => uint) public contributions;
     address public owner;
 
-    constructor() {
+    constructor() public {
         owner = msg.sender;
         contributions[msg.sender] = 1000 * (1 ether);
     }

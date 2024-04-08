@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
 contract Delegate {
     address public owner;
 
-    constructor(address _owner) {
+    constructor(address _owner) public {
         owner = _owner;
     }
 
@@ -17,7 +17,7 @@ contract Delegation {
     address public owner;
     Delegate delegate;
 
-    constructor(address _delegateAddress) {
+    constructor(address _delegateAddress) public {
         delegate = Delegate(_delegateAddress);
         owner = msg.sender;
     }

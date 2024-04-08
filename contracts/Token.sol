@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
 contract Token {
     mapping(address => uint) balances;
     uint public totalSupply;
 
-    constructor(uint _initialSupply) {
+    constructor(uint _initialSupply) public {
         balances[msg.sender] = totalSupply = _initialSupply;
     }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
 contract Privacy {
     bool public locked = true;
@@ -9,7 +9,7 @@ contract Privacy {
     uint16 private awkwardness = uint16(block.timestamp);
     bytes32[3] private data;
 
-    constructor(bytes32[3] memory _data) {
+    constructor(bytes32[3] memory _data) public {
         data = _data;
     }
 
