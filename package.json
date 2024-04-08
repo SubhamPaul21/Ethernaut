@@ -11,7 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "hardhat": "^2.22.2"
+    "@nomicfoundation/hardhat-web3-v4": "^1.0.0",
+    "hardhat": "^2.22.2",
+    "web3": "^4.7.0"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
